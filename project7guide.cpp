@@ -3,11 +3,11 @@
 #include "bag.h"
 using namespace std;
 
-int main() {
+int main()
+{
   // Declarations
-  Bag groceries;                 // default ctor
+  Bag groceries; // default ctor
   string item;
-
   // test add items
   cout << "*** TEST 1 add() \n";
   groceries.add("milk");
@@ -41,12 +41,13 @@ int main() {
   // TEST add() boolean return
   cout << "*** TEST 6 add() boolean return\n";
   cout << "Enter an item or 'quit': ";
-  getline(cin,item);
-  while (item != "quit") {
-     if (!groceries.add(item))
-        cout << "ERROR - bag is full!\n";
-     cout << "Enter an item or 'quit': ";
-     getline(cin,item);
+  getline(cin, item);
+  while (item != "quit")
+  {
+    if (!groceries.add(item))
+      cout << "ERROR - bag is full!\n";
+    cout << "Enter an item or 'quit': ";
+    getline(cin, item);
   }
 
   groceries.display();
@@ -68,11 +69,7 @@ int main() {
 
   // test of getfrequency Of()
   cout << "*** TEST 8 getFrequencyOf()\n";
-  cout << item << " is in the list " << groceries.getFrequencyOf(item) << " times\n"; 
-
-
+  cout << item << " is in the list " << groceries.getFrequencyOf(item) << " times\n";
 
   cout << "\n\n****** TEST COMPLETE ******\n";
-
 }
-
